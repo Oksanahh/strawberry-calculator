@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ukr">
+    <head>
+<title>Паляничкулятор</title>
+<link rel="icon" type="image/png" sizes="32x32" href="strawberry.png">
+
+
+</head>
+<link rel="stylesheet" href="straw.css">
+
+<body>
+
+    <!--pop-up-->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+<h1 class="popupgreetingtext">
+    <img src = "pop-up.png" alt="Паляничка" class="popupgreetingicon"> 
+Привіт!</h1>
+<p class="popupquestion">Хочеш порахувати, скільки в тебе паляничок?</p>
+<button class="straw-btn" onclick="proceed()">Так!<img src = yes.png class="yesimage"></button>
+<button class="straw-btn" onclick="notProceed()">Не хочу рахувати<img src = no.png class="noimage"></button>
+        </div>
+    </div>
+
+    <!--sad message-->
+    <div class="notproceedmessage" style="display: none;">
+        <p><img src = "pleading.png" alt="Чекаю на тебе" class="notproceedimage"> 
+            Сумно, але паляничкулятор чекатиме! &gt; . &lt;</p>
+            <button onclick="goBack()" class="sad-btn">Змінити рішення</button>
+      </div>
+
+      <audio id="rain-sound" loop>
+        <source src="sadsound.mp3" type="audio/mpeg">
+      </audio>
+
+      <!--calculator everything-->
+      <div class="calc-frame">
+        <img src="frame.png" alt="frame" class="calculatorframe">
+      </div>
+
+    
+      <div class="calculator" id="calculator" style="display: none;">
+
+        <div class="calc-character" id="calcCharacter">
+            <img src="standard.png" id="characterImage">
+                    </div>  
+
+        <h2 class="calctext"><span>Це твій<br>паляничкулятор</span></h2>
+                <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button class="calcbutton"onclick="clearDisplay()">C</button>
+            <button class="calcbutton"onclick="appendValue('7')">7</button>
+            <button class="calcbutton"onclick="appendValue('8')">8</button>
+            <button class="calcbutton"onclick="appendValue('9')">9</button>
+
+            <button class="calcbutton"onclick="appendValue('+')">+</button>
+            <button class="calcbutton"onclick="appendValue('4')">4</button>
+            <button class="calcbutton"onclick="appendValue('5')">5</button>
+            <button class="calcbutton"onclick="appendValue('6')">6</button>
+
+            <button class="calcbutton"onclick="appendValue('-')">-</button>
+            <button class="calcbutton"onclick="appendValue('1')">1</button>
+            <button class="calcbutton"onclick="appendValue('2')">2</button>
+            <button class="calcbutton"onclick="appendValue('3')">3</button>
+
+            <button class="calcbutton symbol" onclick="appendValue('*')">×</button>
+            <button class="calcbutton"onclick="appendValue('.')">.</button>
+            <button class="calcbutton" onclick="appendValue('0')">0</button>
+            <button class="calculatebutton"onclick="calculate()">=</button>
+            <button class="calcbutton symbol" onclick="appendValue('/')">÷</button>
+
+            <button class="calcbutton" onclick="backspace()">DEL</button>
+
+            <button style="visibility: hidden;"></button>
+  <button style="visibility: hidden;"></button>
+  <button style="visibility: hidden;"></button>
+
+  <audio id="calcsound" loop>
+    <source src="happy.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="click-sound" src="meow.mp3" preload="auto"></audio>
+
+          </div>
+
+      </div>
+
+      
+      <button id="toggle-audio"><img src = music.png class="musicimage">Не заважати</button>
+      
+      <button id="returnpopup" onclick="returnpop()">
+        <div ></div>
+        <span>Назад на гарний екранчик</span>
+      </button>
+
+    <script src="straw.js"></script>
+
+
+</body>
+</html>
