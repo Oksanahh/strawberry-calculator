@@ -407,7 +407,7 @@ body.calc-mode #toggle-audio {
   .calc-frame {
     display: none;
     position: absolute;
-    bottom: -40px;         
+    bottom: 20px;         
     right: 27%;           
     z-index: 0;
     pointer-events: none;
